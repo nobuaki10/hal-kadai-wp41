@@ -1,0 +1,12 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+AddType image/xicon .ico
+<Files favicon.ico>
+ErrorDocument 404 ディレクトリ/favicon.ico
+</Files>

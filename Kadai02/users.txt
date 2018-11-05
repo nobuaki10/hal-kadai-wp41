@@ -1,0 +1,3 @@
+a,a,あ,img/a.png
+b,b,い,img/b.png
+c,c,う,img/c.png

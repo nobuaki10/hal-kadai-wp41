@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang ="ja">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>正規表現チェック</h1>
+    <form method="post" action="view.php">
+      <input type="text" name="input_date"/>
+      <input type="text" name="a"/>
+      <textarea name="ta"></textarea>
+      <input type="hidden" name="k" value="かくし"/>
+
+      <input type="checkbox" name ="c[]" value="c1">aaaa</input>
+      <input type="checkbox" name ="c[]" value="c2">aaaa</input>
+      <input type="checkbox" name ="c[]" value="c3">aaaa</input>
+
+      <input type="radio" name="r" value="aaa">aaa</input>
+      <input type="radio" name="r" value="bbb">bbb</input>
+      <input type="radio" name="r" value="ccc">ccc</input>
+
+      <input type="submit" value="check!">
+    </form>
+    <a href="view.php? input_date=x&a=xxx">aaa</a>
+  </body>
+</html>

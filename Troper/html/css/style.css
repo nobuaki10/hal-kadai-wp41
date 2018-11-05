@@ -1,0 +1,1059 @@
+/*******************************************************************************
+  style.css
+*******************************************************************************/
+
+/*== index ===========================================================
+  1.ページスタイル
+   ┣ 全ての画面
+   ┣ 全てのユーザ用画面
+   ┣ ログイン画面
+   ┣ グローバルナビ
+   ┣ プロフィール編集画面
+   ┣ 日報表示画面
+   ┣ 日報作成画面
+   ┣ ユーザ一覧画面
+   ┣ グループ一覧画面
+   ┣ 管理者用メインページ画面
+   ┣ ユーザ新規作成・編集画面
+   ┣ グループ新規作成・編集画面
+   ┗
+
+   2.ボタンスタイル
+   ┣ ログインボタン
+   ┣ プロフィール編集画面のボタン
+   ┣ グローバルナビのボタン
+   ┣ ユーザ・グループ・管理者用メインページのボタン(黄色)
+   ┣ユーザプロフィール編集完了ボタン(枠線二重のオレンジ色)
+   ┣新規作成ボタン(緑色)
+   ┣戻るボタン(水色)
+   ┣編集ボタン(紫色)
+   ┗決定・削除ボタン(赤色)
+
+   3.テキストボックススタイル
+   ┗ テキストボックス
+
+   4.admin画面スタイル
+
+
+====================================================================*/
+
+
+
+/*--------------------------------------------------------*/
+/* 1.ページスタイル                                         */
+/*--------------------------------------------------------*/
+
+/*------------------------------------------------
+   全ての画面
+------------------------------------------------*/
+@charset "UTF-8";
+
+html,body{
+  height:100%;
+  width:100%;
+  font-size : 100%;
+  margin-left : auto;
+  margin-right : auto;
+  background : #fdfdfd;
+  overflow: hidden;
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+body{
+  background: rgb(240,230,210);
+}
+
+/* 全体flex */
+#mainflex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+}
+
+/*------------------------------------------------
+   全てのユーザ用画面
+------------------------------------------------*/
+/* 左側flex */
+#mainflex-container #left-content{
+  background:rgb(239,144,2);
+  max-width: 12rem;
+  min-width: 12rem;
+  overflow: scroll;
+  z-index: 20;
+}
+
+/* 右側flex */
+#mainflex-container #right-content{
+  -webkit-flex-grow: 8; /* Safari */
+  flex-grow: 8;
+  overflow: scroll;
+  min-width: 10rem;
+  height:100%;
+  }
+
+/* コンテンツ表示エリア */
+#right-content #content-area{
+  max-width:61rem;
+  min-width:25rem;
+}
+
+/*------------------------------------------------
+   ログイン画面
+------------------------------------------------*/
+#index-header
+{
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  min-width: 45rem;
+  background: rgb(239,144,2);
+}
+
+#index-background
+{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-justify-content: center; /* Safari */
+  justify-content:         center;
+  background: rgb(249,242,220);
+  min-width: 45rem;
+  width: 100%;
+  height: 100%;
+}
+
+#index-form
+{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  background: rgb(249,249,240);
+  margin-top: 3.5rem;
+  width: 25rem;
+  height: 12rem;
+  padding: 2rem 8rem 2rem 8rem;
+  box-shadow: 0 0 7px rgb(191,163,102);
+  border-radius:3px;
+}
+
+#index-formTitle
+{
+  -webkit-flex-grow: 1; /* Safari */
+  flex-grow:         1;
+  text-align: left;
+  width: 25rem;
+}
+
+#index-formTitleName
+{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#index-error
+{
+  position: relative;
+  top: 0.5rem;
+  height: 1rem;
+}
+
+#index-formEditor
+{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  -webkit-flex-grow: 1.8; /* Safari */
+  flex-grow:         1.8;
+  width: 25rem;
+  font-size: 1.2rem;
+}
+
+#index-userid
+{
+  text-align: right;
+  margin-bottom: 0.8rem;
+}
+
+#index-password
+{
+  text-align: right;
+}
+
+#index-userid-box
+{
+  width: 24.5rem;
+  height: 1.4rem;
+  font-size: 1.0rem;
+}
+
+#index-password-box
+{
+  width: 24.5rem;
+  height: 1.4rem;
+  font-size: 1.0rem;
+}
+
+#index-login
+{
+  -webkit-flex-grow: 1; /* Safari */
+  flex-grow:         1;
+
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: row-reverse; /* Safari */
+  flex-direction:         row-reverse;
+  width: 25rem;
+}
+
+#index-loginButtonFrame
+{
+  width: 9rem;
+  height:2.5rem;
+}
+
+#index-loginButtonFrame img{
+  width: 20px;
+  height: 20px;
+  margin: 4px 5px -4px -5px;
+}
+
+/*------------------------------------------------
+   グローバルナビ
+------------------------------------------------*/
+/*ユーザ表示領域*/
+#menu #userform{
+  background: rgb(239,144,2);
+  margin: 2rem 0 1rem 1rem;
+}
+
+#userform img{
+  background-color:white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*ユーザの名前*/
+#menu #userform #username{
+  padding: 1rem 0.7rem 0 0rem;
+  font-size:1.1rem;
+  text-align: center;
+}
+
+/*------------------------------------------------
+   ユーザプロフィール編集画面
+------------------------------------------------*/
+#report-wrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction:         column;
+  min-width: 30rem;
+  margin: 1rem;
+}
+
+/*項目ごとのflex*/
+#report-wrap .profile-flex {
+  margin-bottom: 0.5rem;
+  min-width: 20rem;
+  padding: 1rem 0 0 10%;
+}
+#report-wrap .profile-title{
+  margin:1rem;
+}
+
+#report-wrap .field-content{
+  background: rgb(249,248,240);
+  box-shadow: 0 0 7px rgb(191,163,102);
+  border-radius: 3px;
+  margin:1.2rem 0 0 0;
+  padding:0.5rem 0.5rem 0.8rem 0.5rem;
+  min-width:40rem;
+}
+
+#report-wrap .field-content .field-content-font{
+  font-size:0.9rem;
+  margin-top:0.3rem;
+}
+
+.field-content .field-title{
+  position: relative;
+  top: -23px;
+  background: #fff;
+  padding: 0.4rem 0.4rem 0 0.4rem;
+  border-radius: 3px 3px 0 0;
+  border: solid 1px #000;
+  border-bottom-left-radius: 0px;
+  margin-left: -1px;
+  border-bottom: none;
+  width:8rem;
+  background: rgb(249,248,240);
+  box-shadow: 0 0px 7px rgb(191,163,102);
+}
+
+ #success{
+  position: relative;
+  top:1rem;
+  left:1rem;
+  height:1rem;
+  color: #58ACFA;
+  margin-left: 2rem;
+}
+ .error{
+  color: #FE2E2E;
+  height:1rem;
+}
+
+/*------------------------------------------------
+   日報表示画面
+------------------------------------------------*/
+#right-content .flex-wrap-content{
+  margin: 0.5rem 1rem 1rem 1rem;
+  box-shadow: 0 0 7px rgb(191,163,102);
+  background: rgb(249,248,240);
+  border-radius:3px;
+  padding: 1.2rem;
+  height: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  font-size:1.0rem;
+  min-width: 40rem;
+}
+/*日報がない場合の表示*/
+#right-content #nonereport{
+  font-size:1rem;
+  margin: 5rem;
+  width:100%;
+  text-align:center;
+}
+
+/* 投稿者 */
+#right-content .contributor{
+  margin-bottom:0.5rem;
+}
+
+/* 日時表示 */
+.flex-wrap-content .contime{
+  margin-bottom:0.5rem;
+}
+/* 日報内容表示 */
+.flex-wrap-content .comment{
+  background: rgb(252,252,252);
+  margin: 0 0.2rem 1rem 0.2rem;
+  padding: 0 0 0 0.8rem;
+  line-height: 130%;
+  color: rgb(50,50,50);
+  font-size:1rem;
+}
+
+.flex-wrap-content .comment-title{
+  margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.flex-wrap-content .comment-num-wrap{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.comment-num-wrap .comment-grow{
+  -webkit-flex-grow: 1;
+  flex-grow:         1;
+}
+
+#comment-button-wrap{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end; /* Safari */
+  justify-content:         flex-end;
+}
+
+#space{
+  width: 0.3rem;
+}
+
+.comment-parameter{
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.4rem;
+}
+
+.write{
+  display: none;
+}
+
+.view {
+  background:#fff;
+  padding:1rem;
+  margin: 0.5rem 0;
+  overflow: scroll;
+  height: 6rem;
+}
+
+/*------------------------------------------------
+   日報作成画面
+------------------------------------------------*/
+/*日付*/
+#reportflex-topcontainer {
+  margin: 0.5rem 1rem 0 1rem;
+  box-shadow: 0 0 7px rgb(191,163,102);
+  background: rgb(249,248,240);
+  border-radius:3px;
+  padding: 0.2rem;
+  margin-bottom:1rem;
+  height: auto;
+}
+
+#reportflex-topcontainer > #dateflex {
+  margin: 0.5rem;
+  padding: 0.4rem 0;
+}
+
+/*書き込むところ*/
+#reportflex-topcontainer .reportflex {
+  margin: 1.3rem;
+}
+
+/*右ボタンflex*/
+#reportflex-topcontainer #rbuttonflex {
+  margin:0 auto;
+  width:15rem;
+  height:4rem;
+  margin-top:2rem;
+  font-size:1rem;
+}
+
+/*左ボタンflex*/
+#reportflex-bottomcontainer #lbuttonflex {
+  background: #bcc1cc;
+  margin: 2rem;
+  text-align: right;
+  -webkit-flex-grow:1;
+}
+
+.date-flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+#year-textbox {
+  width:2.5rem;
+  height: 1rem;
+}
+
+.monthdate-textbox {
+  width: 1.5rem;
+  height: 1rem;
+}
+
+.date-text-adjust{
+  padding-top: 0.2rem;
+}
+
+/*疲労度・モチベーションのラジオボタン*/
+.report-radio{
+  display: none;
+  padding: 0.2rem;
+}
+
+.report-radio-img{
+  width: 2.5rem;
+  height:2.5rem;
+  margin:0.2rem;
+}
+
+.report-radio + .report-radio-img {
+  opacity:0.4;
+}
+
+.report-radio:checked + .report-radio-img {
+  opacity:1;
+}
+
+.report-radio:hover + .report-radio-img:hover {
+  opacity:1;
+}
+
+/*------------------------------------------------
+   ユーザ・グループ一覧画面
+------------------------------------------------*/
+/*数と作成ボタンの枠*/
+#listflex-topcontainer {
+  margin-left:1rem;
+  max-width: 100%;
+  min-width: 36rem;
+}
+
+#list-all-wrap{
+  background: rgb(249,248,240);
+  box-shadow: 0 0 7px rgb(191,163,102);
+  margin: 0.5rem 1rem 1rem 1rem;
+  border-radius: 3px;
+  max-width: 61rem;
+  min-width: 61rem;
+}
+
+/*並んでる枠*/
+#listflex-cencontainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  max-width: 100%;
+  min-width: 10rem;
+}
+
+/*ユーザ数もしくはグループ数*/
+#listflex-topcontainer #usercnt {
+  padding: 1.3rem 0;
+  max-width: 100%;
+  min-width: 4rem;
+  font-size: 1.1rem;
+}
+
+/*新規作成ボタン*/
+#listflex-topcontainer #entry {
+
+  margin: 0.8rem 0 -0.2rem -0.1rem;
+  max-width: 100%;
+  min-width: 4rem;
+  -webkit-flex-grow:1;
+  flex-grow:1
+}
+
+/*ユーザもしくはグループの箱(横に3つのボックス)*/
+#listflex-cencontainer .userflex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0.3rem;
+  max-width: 100%;
+  min-width: 12rem;
+  -webkit-flex-grow:1;
+  flex-grow:1
+}
+
+/*１つ分の名称と編集削除ボタンの箱*/
+.userflex .one-user{
+  margin: 0.3rem;
+  padding: 0.3rem;
+  width: auto;
+  min-width: 10rem;
+  height: auto;
+}
+
+.one-user .one-user-button{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  background: rgb(252,252,252);
+  box-shadow: 0 0 7px rgb(239,144,2);
+  border-radius: 3px;
+  width:16rem;
+  min-height: 2rem;
+  padding: 0.5rem 1.0rem;
+  margin-bottom: 0.5rem;
+  font-size:0.9rem;
+
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+  align-items: center; /* 縦方向中央揃え */
+  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+  justify-content: center; /* 横方向中央揃え */
+}
+
+.one-user .one-user-button:hover{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+
+}
+
+/*------------------------------------------------
+   管理者用メインページ画面
+------------------------------------------------*/
+
+/*------------------------------------------------
+   ユーザ新規作成・編集画面
+------------------------------------------------*/
+#reportflex-bottomcontainer {
+  display: -webkit-flex;
+  display: flex;
+  background: rgb(249,248,240);
+  box-shadow: 0 0 7px rgb(191,163,102);
+  border-radius: 3px;
+  margin-top:1.2rem;
+  padding: 1rem;
+  max-width: 100%;
+  min-width: 10rem;
+}
+
+.button-area{
+  margin:0 auto;
+  width:100%;
+  padding:0 0.3rem;
+}
+
+.button-area button{
+  width:100%;
+}
+
+/*------------------------------------------------
+   グループ新規作成・編集画面
+------------------------------------------------*/
+#admin-header {
+  padding-top: 0.4rem;
+  font-size: 1.5rem;
+  min-width: 45rem;
+  height: 2.0rem;
+  background: rgb(239,144,2);
+}
+/*--flex上下（真ん中はユーザ(グループ)一覧を使用）--*/
+#groupeditflex-topcontainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: 36rem;
+}
+
+#groupeditflex-bottomcontainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  max-width: 100%;
+  min-width: 10rem;
+  padding: 1.2rem 1rem 1rem 1rem;
+
+}
+/*--グループ名--*/
+#groupeditflex-topcontainer #groupname {
+  margin: 0 0 0 1.3rem;
+  padding: 0 0 1rem 0;
+  max-width: 100%;
+  min-width: 4rem;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/*--メンバー選択--*/
+#groupeditflex-topcontainer #userselect {
+  margin: 0 0 0 1.3rem;
+  padding: 0.4rem 0;
+  max-width: 100%;
+  min-width: 4rem;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.checkbox {
+  width: auto;
+  height: auto;
+}
+
+/*--------------------------------------------------------*/
+/* 2.ボタンスタイル                                         */
+/*--------------------------------------------------------*/
+
+/*------------------------------------------------
+   ログインボタン
+------------------------------------------------*/
+#index-loginButton
+{
+  border-radius: 5px;        /* CSS3草案 */
+  background: rgb(239,144,2);
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 9rem;
+  height: 2.5rem;
+  text-align: center;
+  color: #fff;
+  border:solid 1px #fff;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+#index-loginButton:after{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 100%;
+  background : rgb(249,248,240);
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.3s;
+  z-index: -1;
+}
+#index-loginButton:hover{
+  color: rgb(239,144,2);
+}
+#index-loginButton:hover:after{
+  height: 250%;
+  opacity: 1;
+}
+#index-loginButton:active:after{
+  height: 350%;
+  opacity: 1;
+}
+
+/*------------------------------------------------
+   プロフィール編集画面のボタン
+------------------------------------------------*/
+#menu li .btnoption{
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  transition: all .1s;
+  width: 6.11rem;
+  text-align:left;
+  transition: 0s;
+  font-size: 15px;
+  padding: 15px 20px 15px 35px;
+  margin-left:-5px;
+}
+
+#left-content .btnoption img:hover{
+  height: 34px;
+  width: 34px;
+  margin: -2px;
+}
+
+
+.btnoption img{
+  height: 30px;
+  width: 30px;
+}
+
+/*------------------------------------------------
+   グローバルナビのボタン
+------------------------------------------------*/
+#menu li .btnlist{
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  transition: all .1s;
+  display: block;
+  width: 100%;
+  text-align:left;
+  transition: 0s;
+  font-size: 15px;
+  padding: 15px;
+  color: rgb(90,90,90);
+}
+
+#menu li .btnlist:hover{
+  background: rgb(250,160,90);
+  color: #000;
+  font-size: 16px;
+  padding: 15px;
+}
+
+#menu li .btnlistactive{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  display: block;
+  width: 100%;
+  text-align:left;
+  font-size: 15px;
+  padding: 15px;
+  transition-property: all;
+  transition: 0.3s linear;
+  background: rgb(240,230,210);
+}
+
+#menu li .btnlist img{
+  height: 30px;
+  width: 30px;
+  margin-bottom: -10px;
+  margin-right:10px;
+}
+#menu li .btnlistactive  img{
+  height: 30px;
+  width: 30px;
+  margin-bottom: -10px;
+  margin-right:10px;
+}
+
+/*------------------------------------------------
+   表示領域変更ボタン
+------------------------------------------------*/
+#up{
+  position: absolute;
+  bottom: 1rem;
+  right: 8rem;
+}
+
+#down{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#updownbutton{
+  width:6rem;
+  height:3rem;
+  font-size: 1rem;
+  background: #fff;
+  border: solid 1px #000;
+  border-radius: 3px;
+  opacity: 0.1;
+  z-index:009
+}
+#updownbutton:hover{
+  width:6rem;
+  height:3rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 3px;
+  opacity: 1;
+
+}
+
+
+
+/*------------------------------------------------
+   ユーザ・グループ・管理者用メインページのボタン(黄色)
+------------------------------------------------*/
+.rbutton {
+  display: inline-block;
+  padding:0;
+  text-decoration: none;
+  color: #000;
+  border: solid 2px #ffcc66;
+  background: #fff;
+  border-radius: 3px;
+  transition: .4s;
+  width: 15rem;
+  height: 3rem;
+  font-size: 0.9rem;
+}
+
+.rbutton:hover {
+  border: solid 2px #ffcc66;
+  background: #ffcc66;
+  color: white;
+  box-shadow: 0 0 7px rgb(239,144,2);
+}
+
+/*------------------------------------------------
+   ユーザプロフィール編集完了ボタン(枠線二重のオレンジ色)
+------------------------------------------------*/
+.lbutton {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: rgb(150,100,0);
+  border: double 3px rgb(239,144,2);
+  background: rgb(249,248,240);
+  border-radius: 3px;
+  transition: .4s;
+  margin: 1rem 0.2rem;
+  width:8rem;
+  height:2rem;
+  font-size:0.8rem;
+}
+
+.lbutton:hover {
+  background: rgb(239,144,2);
+  color: white;
+  box-shadow: 0 0 7px #ff6666;
+}
+
+/*------------------------------------------------
+   新規作成ボタン(緑色)
+------------------------------------------------*/
+.bbutton {
+  display: inline-block;
+  padding: 0.3em 2rem;
+  text-decoration: none;
+  color: rgb(90,211,47);
+  box-shadow: 0 0 7px rgb(90,211,47);
+  border: solid 1px rgb(249,248,240);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.bbutton:hover {
+  background: rgb(90,211,47);
+  border: solid 1px rgb(90,211,47);
+  color: white;
+}
+
+/*------------------------------------------------
+   戻るボタン(水色)
+------------------------------------------------*/
+.cbutton {
+  display: inline-block;
+  padding: 0.3em 2rem;
+  text-decoration: none;
+  color: #67c5ff;
+  box-shadow: 0 0 7px #67c5ff;
+  border: solid 1px rgb(249,248,240);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.cbutton:hover {
+  background: #67c5ff;
+  border: solid 1px #67c5ff;
+  color: white;
+}
+
+/*------------------------------------------------
+   編集ボタン(紫色)
+------------------------------------------------*/
+.ebutton {
+  display: inline-block;
+  padding: 0.3em 2rem;
+  text-decoration: none;
+  color: #d580ff;
+  box-shadow: 0 0 7px #d580ff;
+  border: solid 1px rgb(249,248,240);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.ebutton:hover {
+  background: #d580ff;
+  border: solid 1px #d580ff;
+  color: white;
+}
+
+/*------------------------------------------------
+   決定・削除ボタン(赤色)
+------------------------------------------------*/
+.mbutton {
+  display: inline-block;
+  padding: 0.3em 2rem;
+  text-decoration: none;
+  color: rgb(255,92,92);
+  box-shadow: 0 0 7px rgb(255,92,92);
+  border: solid 1px rgb(249,248,240);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.mbutton:hover {
+  background: rgb(255,92,92);
+  border: solid 1px rgb(255,92,92);
+  color: white;
+}
+
+/*--------------------------------------------------------*/
+/* 3.テキストボックススタイル                                 */
+/*--------------------------------------------------------*/
+
+/*------------------------------------------------
+   テキストボックス
+------------------------------------------------*/
+textarea {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  font-size: 1.0rem;
+  line-height: 1rem;
+  resize: none;
+  width: 97%;
+  height:100%;
+  border-radius: 3px;
+
+}
+
+textarea:focus {
+  box-shadow: 0 0 7px rgb(250,160,20);
+  border: 1px solid rgb(255,255,255);
+}
+
+input {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  border-radius: 3px;
+  border:solid 1px #000;
+  width: 20rem;
+  height:1.2rem;
+  font-size:1rem;
+}
+input:focus {
+  box-shadow: 0 0 7px rgb(250,160,20);
+  border: 1px solid rgb(255,255,255);
+}
+
+pre {
+    /* Mozilla */
+    white-space: -moz-pre-wrap;
+    /* Opera 4-6 */
+    white-space: -pre-wrap;
+    /* Opera 7 */
+    white-space: -o-pre-wrap;
+    /* CSS3 */
+    white-space: pre-wrap;
+    /* IE 5.5+ */
+    word-wrap: break-all;
+    word-break: break-all;
+    font-size: 1rem;
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+/*--------------------------------------------------------*/
+/* 4.admin管理画面スタイル                                         */
+/*--------------------------------------------------------*/
+
+#adminmain-wrap
+{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		margin:3rem auto 0 auto;
+		width: 30rem;
+		height: auto;
+		text-align: center;
+		box-shadow: 0 0 7px rgb(191,163,102);
+	  background: rgb(249,248,240);
+	  border-radius:3px;
+		padding:2rem;
+}
+
+#adminmain-title
+{
+	  text-align:center;
+		padding: 3rem 0;
+		font-size: 3rem;
+}
+
+.adminmain-menu
+{
+		min-height: 3rem;
+		width: 25rem;
+		margin:10px auto;
+}
+
+.adminmain-button
+{
+		width: 25rem;
+		height: 3rem;
+}

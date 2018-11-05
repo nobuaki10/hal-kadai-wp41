@@ -1,0 +1,10 @@
+.gaku{
+  display: flex;
+  flex-direction: row;
+  width:323px;
+  height:323px;
+  background-image: url("../img/gaku.png");
+  padding: 60;
+  justify-content: center;
+  align-items: center;
+}

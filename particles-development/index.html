@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <style type="text/css">
+      canvas#sample {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="js/audioManager.min.js"></script>
+  <!--  <input type="button" value="start" onclick="aaa({star:{number:300,size:5,opacity:0.5}})"/>-->
+    <input type="button" value="start" onclick="aaa(300)"/>
+    <input type="button" value="end" onclick="aaa(0)"/>
+
+    <div id="particles-js">
+    </div>
+    <canvas id="sample"></canvas>
+
+    <div id="particles-star"></div>
+
+    <div id="w_milkyway">
+      <div id="milkyway"></div>
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js-master/particles.js"></script>
+    <script src="js/set.js"></script>
+    <script src="js/anim.js"></script>
+    <script src="js/star.js"></script>
+    <script src="js/setXY.js"></script>
+  </body>
+</html>
