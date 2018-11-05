@@ -17,18 +17,22 @@
   </head>
   <body>
     <p>以下の内容でよろしいですか？</p>
-    <form method="post" action="">
+    <form method="post" action="contact_finish.php">
       <h2>お名前</h2>
       <p class="max">{$name|escape|nl2br}</p>
+      <input type="hidden" name="name" value="{$name}"/>
 
       <h2>ご連絡先(メールアドレス)</h2>
       <p class="max">{$mail|escape|nl2br}</p>
+      <input type="hidden" name="mail" value="{$mail}"/>
 
       <h2>お問合せ件名</h2>
       <p class="max">{$subject|escape|nl2br}</p>
+      <input type="hidden" name="subject" value="{$subject}"/>
 
       <h2>お問い合わせ内容＊</h2>
       <p class="max">{$content|escape|nl2br}</p>
+      <input type="hidden" name="content" value="{$content}"/>
 
       <div>
         <input id="submitbtn" type="submit" name="back" value="戻る"/>
